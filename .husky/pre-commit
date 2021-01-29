@@ -1,0 +1,5 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+npx prettier --check "{,!(node_modules|public)/**/}*.{js,ts,svelte}"
+npm run validate

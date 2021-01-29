@@ -1,7 +1,10 @@
 {
   "tabWidth": 2,
-  "semi": false,
   "singleQuote": true,
   "trailingComma": "es5",
-  "plugins": ["prettier-plugin-svelte"]
+  "svelteStrictMode": true,
+  "svelteBracketNewLine": false,
+  "svelteAllowShorthand": false,
+  "svelteIndentScriptAndStyle": false,
+  "svelteSortOrder": "options-scripts-styles-markup"
 }

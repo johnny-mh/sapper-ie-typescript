@@ -1,20 +1,24 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "sapper-gift",
   "version": "0.0.1",
+  "description": "sapper-gift",
   "scripts": {
-    "dev": "sapper dev",
     "build": "sapper build --legacy",
+    "dev": "sapper dev",
     "export": "sapper export --legacy",
+    "format": "npx prettier --write \"{,!(node_modules|public)/**/}*.{js,svelte}\"",
+    "postinstall": "husky install",
     "start": "node __sapper__/build",
-    "validate": "svelte-check --ignore src/node_modules/@sapper",
-    "fix": "npx eslint --fix \"{,!(node_modules|public)/**/}*.{js,svelte}\"",
-    "format": "npx prettier --write \"{,!(node_modules|public)/**/}*.{js,svelte}\""
+    "validate": "svelte-check --ignore src/node_modules/@sapper"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
   "dependencies": {
     "compression": "^1.7.1",
     "express": "^4.17.1",
-    "polka": "next",
     "sirv": "^1.0.0"
   },
   "devDependencies": {
@@ -32,11 +36,16 @@
     "@tsconfig/svelte": "^1.0.10",
     "@types/compression": "^1.7.0",
     "@types/express": "^4.17.11",
-    "@types/node": "^14.11.1",
-    "@types/polka": "^0.5.1",
+    "@types/node": "^14.14.22",
+    "@typescript-eslint/eslint-plugin": "^4.14.1",
+    "@typescript-eslint/parser": "^4.14.1",
     "babel-eslint": "^10.1.0",
+    "cz-conventional-changelog": "3.3.0",
     "eslint": "^7.18.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-svelte3": "^3.0.0",
+    "husky": "^5.0.8",
     "prettier": "^2.2.1",
     "prettier-plugin-svelte": "^2.1.1",
     "rollup": "^2.3.4",

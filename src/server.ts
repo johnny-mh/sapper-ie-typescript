@@ -8,9 +8,10 @@ const dev = NODE_ENV === 'development';
 
 const app = express();
 
-app.use(
-			compression({ threshold: 0 }),
-		sirv('static', { dev }),
-		sapper.middleware()
-)
-.listen(PORT)
+app
+  .use(
+    compression({ threshold: 0 }),
+    sirv('static', { dev }),
+    sapper.middleware()
+  )
+  .listen(PORT);
